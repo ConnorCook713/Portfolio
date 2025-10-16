@@ -1,11 +1,13 @@
-Overview
-- To better understand and utilize the concepts learned with the CySa+ certificate. I'm creating various scripts to learn about true Cybersecurity workflows such as automating threat intelligence, practice real-world Cybersecurity workflows, and system managment. 
+# CYSA+ Labs & Code
 
-# STIX_PROD.py
-- The MITRE STIX endpoint is queried for enterprise IOCs and threats. The data is collected, parsed, and written to a CSV.
-- This data will later be uploaded to my Splunk home lab to enhance dashboards visibility. 
+This repository contains hands-on labs and supporting code for CompTIA CYSA+ practice.
 
+## Folder Overview
 
-# CSV_Compare.py
-- CSV exports of Antivirus, Active Directory, and Remote Managment tools are compared. Outputs consist of CSV containing device similarity and differences between systems.
-- AD_Query.ps1 -> A Powershell script used to query Active Directory for all ComputerNames and LastLogonDates. Devices are organized by LastLogonDate.
+- **code/** – Scripts and tools used in labs (Python, PowerShell, etc.). Each project has its own folder and README.  
+- **lab/** – Self-contained labs with instructions, screenshots, and configurations. Each lab has its own README.
+
+## Navigating the Repository
+
+- Open `code/` to explore scripts and utilities for the labs.  
+- Open `lab/` to see available labs. Each lab folder contains detailed instructions and resources.
