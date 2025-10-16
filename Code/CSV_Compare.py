@@ -4,19 +4,25 @@ import numpy as np
 username = "Insert username for file path"
 
 # Paths to CSV files
-AV_Path = f"C:\\Users\\{username}\\Documents\\potter_data\\AV.csv"
-RMM_Path = f"C:\\Users\\{username}\\Documents\\potter_data\\RMM.csv"
-AD_Path = f"C:\\Users\\{username}\\Documents\\potter_data\\computerlastlogon.csv"
+AV_Path = f"C:\\Users\\{username}\\Documents\\AV.csv"
+RMM_Path = f"C:\\Users\\{username}\\Documents\\RMM.csv"
+AD_Path = f"C:\\Users\\{username}\\Documents\\\computerlastlogon.csv"
 
 def compare_csv(AV_file: str, RMM_file: str, AD_file: str):
 
     try:
+        # read CSVs and converts them to pandas dataframe
         AV_df = pd.read_csv(AV_file)
         RMM_df = pd.read_csv(RMM_file)
         AD_df = pd.read_csv(AD_file)
 
         # Extract device names (assuming column is "Device Name" or similar)
         # ADjust column name if needed - could be "Name", "Device Name", etc.
+        # .ioloc[:, 0] -> Grabs first column of pandas datafram
+        # .dropna() -> removes all "missing" values
+        # astype(str) -> converts all values to strings
+        # str.strip() -> strips all whitespace
+        # str.upper() -> converts all strings to uppercase
         AV_devices = set(AV_df.iloc[:, 0].dropna().astype(str).str.strip().str.upper())
         RMM_devices = set(RMM_df.iloc[:, 0].dropna().astype(str).str.strip().str.upper())
         AD_devices = set(AD_df.iloc[:, 0].dropna().astype(str).str.strip().str.upper())
@@ -71,3 +77,4 @@ def compare_csv(AV_file: str, RMM_file: str, AD_file: str):
 compare_csv(AV_Path, RMM_Path, AD_Path)
 
     
+
