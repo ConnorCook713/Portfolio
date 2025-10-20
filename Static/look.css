@@ -1,0 +1,82 @@
+    /* margin: is used to control the space around the element */
+        /* by default an element is assigned a margin of 0 */
+        /* you can increase the size of an element or a collection of agents using <div> */
+        /* use margin-top:, margin-bottom:, margin-left/right: */
+    /* padding: is used to control the distant of elements from the margin of the element */
+        /* So the larger the margins the more an element us able to be pushed away from it */
+        /* use the same syntax as margin sizing ex. padding-top */
+
+body {
+    /* body indicates that the css within will affect all html elements within the body head*/
+    background-color: #817689;
+    color: #FFFFFF;
+}
+
+.black_line{
+    position: relative;
+    background-color: black;
+    height: 1px; /* Adjust height as needed */
+    width: 100%; /* Make it span the entire width of the screen */
+}
+
+.Container{
+    /* color is used to change font color */
+    /* font is used to change the font family*/
+    /* both box properites are absolute to the containers properties */
+    /* in the HTML code div container encompasses both box divs */
+    /* edit the position if the container then edit the elemtents within the container to move position or pad dependent on the containers position */
+   position: relative;
+   /* adds +100px distance from the right side of the screen */
+   margin-right: 225px;
+   margin-left: 225px;
+ 
+}
+
+/*.Source_Box_Position{
+    position: absolute;
+    background-color: #225ddd;
+    opacity: 0.7;
+    /*adds distance element takes up in webpage added to total area  
+    padding: 70px;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000000 
+} */
+
+/* .Des_Box_Position {
+    position: absolute;
+    background-color: #225ddd;
+    opacity: 0.7;
+    padding: 70px;
+    right: 100px;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000000
+} */
+
+.Source_Box_Position {
+    padding-top: 15px;
+    padding: 15px;
+}
+
+.Des_Box_Position {
+    padding: 15px;
+}
+
+/* .result_padding {
+    padding-top: 25px
+}*/
+
+.seperation_line {
+    position: relative;
+    margin-bottom: 400px;
+    background-color: black;
+    height: 1px; /* Adjust height as needed */
+    width: 100%; /* Make it span the entire width of the screen */
+}
+
+/*CSS can you decorators. You can wrap CSS elements like max-width so that elements look good on all screens*/
+@media (max-width: 600px) {
+    /* Styles for small screens */
+}
+

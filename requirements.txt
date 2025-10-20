@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+sqlalchemy
+datetime
+scapy
+python-dotenv
+mysql-connector-python
+pymysql
+
+## pip install -r requirements.txt

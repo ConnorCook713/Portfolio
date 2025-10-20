@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- lang="en" indicates to the browser the language of the website is english -->
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" href="{{url_for ('static', filename='look.css') }}">
+        <!-- <meta> is used to add info about the metadata of the html document-->
+        <!-- charset="UTF-8"indicated characters in document is interperted as Unicode so the browser text isn't interperted incorrectly-->
+        <meta charset="UTF-8">
+        <!-- name="viewpoint" indicates the <meta> head is indicating viewpoint settings-->
+        <!-- content="device-width, initial-scale=1.0" dicates the browser will display equal to the devices width and starts at a zoom level of 1.0 -->
+        <!-- it makes it so that your website has a consistent view across device types -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CMD Interactive</title>
+    </head>
+    <body>
+        <div class="black_line"></div>
+        <div class="Container">
+                <h1>Query Interactive</h1>
+                <!-- form is a form that intake a POST request to the server inputting data-->
+            <div class="Source_Box_Position">
+                <form method="POST" id="source">
+                    <!-- label for form. for= points to the ID of the input field-->
+                    <label for="source_request">Source IP:</label>
+                    <!-- creates an input field that intakes text -->
+                    <!-- currenty app.py logic needs to be changed so that if post request happens -->
+                    <!-- make logic dependent on what button was used for the POST request -->
+                    <input type="text" id="source_request" name="source_request">
+
+                    <button type="submit"> Enter </button>
+                    <!-- button called submit that submits text within input field as POST method to the Flask app -->
+            </div>
+            <!-- <main> is used to seperate content so <div> headers can't affect the content in <main>-->
+            <!-- the <div> and closing </div> must be contained in the <main> header for the <div> properties to apply -->
+            <!-- {{output}} is a placeholder for the output variable in main.py-->
+            <!-- the variable is printed where the placeholder is located-->
+            <div class="Des_Box_Position">
+                    <label for="des_request">Destination IP: </label>
+                    <input type="'text" id="des_request" name="des_request">
+
+                    <button type="submit"> Enter </button>
+                    
+                    <h3> Source Return: </h3>
+                    <div id="src_output"> </div>
+                    <h3> Destination Return:</h3>
+                    <div id="des_output"></div>
+                    
+                </form>
+            </div>
+            <!-- Look up if GET or POST request is needed. Have live feed of data from NetworkData outputed onto the webpage-->
+        </div>
+        <div class="black_line"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='query.js') }}"></script>
+    </body>
+</html>
